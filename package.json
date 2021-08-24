@@ -1,0 +1,32 @@
+{
+  "name": "babel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "transpile": "babel src --out-dir dist",
+    "start": "node ./dist/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "serverES6toJS5": "babel ./src/services/server.es6.js --out-file ./src/services/server.js",
+    "serverTStoJS5": "./node_modules/.bin/tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "@types/express": "^4.17.13",
+    "@types/express-handlebars": "^5.3.1",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "moment": "^2.29.1",
+    "socketio": "^1.0.0",
+    "typescript": "^4.3.5"
+  },
+  "description": ""
+}
